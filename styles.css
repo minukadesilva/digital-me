@@ -46,28 +46,6 @@ header {
 }
 
 .hamburger-container {
-  position: relative;
-}
-
-.hamburger,
-.close-icon {
-  font-size: 2rem;
-  color: var(--background);
-  cursor: pointer;
-  display: none; /* Hide both by default */
-}
-
-.hamburger {
-  display: block; /* Show hamburger initially */
-}
-
-.close-icon {
-  display: none;
-}
-.close-icon.show {
-  display: block;
-}
-.hamburger.hide {
   display: none;
 }
 
@@ -574,5 +552,37 @@ footer {
   .blog-card h3,
   .project-card h3 {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .hamburger,
+  .close-icon {
+    font-size: 2rem;
+    color: var(--background);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .hamburger.hide {
+    display: none;
+  }
+
+  .close-icon.show {
+    display: block;
   }
 }
