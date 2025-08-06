@@ -45,11 +45,30 @@ header {
   position: relative;
 }
 
-.hamburger {
-  display: none;
+.hamburger-container {
+  position: relative;
+}
+
+.hamburger,
+.close-icon {
   font-size: 2rem;
   color: var(--background);
   cursor: pointer;
+  display: none; /* Hide both by default */
+}
+
+.hamburger {
+  display: block; /* Show hamburger initially */
+}
+
+.close-icon {
+  display: none;
+}
+.close-icon.show {
+  display: block;
+}
+.hamburger.hide {
+  display: none;
 }
 
 .navbar {
